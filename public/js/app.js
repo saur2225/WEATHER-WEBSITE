@@ -6,7 +6,6 @@ const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
 
 
- 
 const message1 = document.querySelector('p')
 weatherForm.addEventListener('submit',(e)=>{
     e.preventDefault()

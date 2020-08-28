@@ -34,3 +34,12 @@ header a{
 .portrait{
     width:250px;
 }
+button{
+    padding:10px 16px;
+    background-color:darkorange;
+    color:white;
+    border:none;
+}
+input{
+    padding:10px 16px;
+}

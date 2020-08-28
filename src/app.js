@@ -32,7 +32,7 @@ app.get('/about',(req, res)=>{
 
 app.get('/help',(req, res)=>{
     res.render('help',{
-        helptext:'this is some helpfull text',
+        helptext:'Kindly go through my github repository for complete code - github.com/saur2225',
         title:'Help',
         name:'Saurabh Srivastava'
     })

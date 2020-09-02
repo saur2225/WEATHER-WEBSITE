@@ -26,13 +26,14 @@ app.get('',(req, res)=>{
 app.get('/about',(req, res)=>{
     res.render('about',{
         title:'About me',
-        name:'Saurabh Srivastava'
+        name:'Saurabh Srivastava',
+        about:'Just a kid, who is trying to learn and explore more in the field of development'
     })
 })
 
 app.get('/help',(req, res)=>{
     res.render('help',{
-        helptext:'Kindly go through my github repository for complete code - github.com/saur2225',
+        helptext:'Kindly go through my github repository for complete code - github.com/saur2225/weather-application',
         title:'Help',
         name:'Saurabh Srivastava'
     })
@@ -43,8 +44,9 @@ app.get('/weather',(req, res)=>{
     }
     geocode(req.query.address, (error,{latitude, longitude, location} = {})=>{
         if(error){
-            return res.send({error})
+             res.send({error})
         }
+        else{
         forcast(latitude, longitude, (error, forcastdata)=>{
             if(error){
                 return res.send({error})
@@ -54,7 +56,8 @@ app.get('/weather',(req, res)=>{
                 location,
             })
         })
-    })
+        }
+})
 })
 app.get('/help/*',(req, res)=>{
     res.render('404',{
